@@ -1,0 +1,75 @@
+
+/*==============================================================================
+Animation style
+============================================================================= */
+
+.fadeAnim {
+  opacity: 0;
+  animation: fadeAnim 1s linear forwards;
+}
+
+.fadeUpAnim {
+  animation: fadeUpAnim .8s ease-in-out forwards;
+}
+
+.fadeLeftAnim {
+  animation: fadeLeftAnim 1s ease-in-out forwards;
+}
+
+.fadeRightAnim {
+  animation: fadeRightAnim 1s ease-in-out forwards;
+}
+
+
+.target-fadeAnim,
+.target-fadeUpAnim,
+.target-fadeLeftAnim,
+.target-fadeRightAnim {
+  opacity: 0;
+}
+
+@keyframes fadeAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(3%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeftAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(3%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRightAnim {
+  0% {
+    opacity: 0;
+    transform: translateX(-3%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
