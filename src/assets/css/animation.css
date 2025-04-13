@@ -9,7 +9,7 @@ Animation style
 }
 
 .fadeUpAnim {
-  animation: fadeUpAnim .8s ease-in-out forwards;
+  animation: fadeUpAnim .5s ease-in-out forwards;
 }
 
 .fadeLeftAnim {

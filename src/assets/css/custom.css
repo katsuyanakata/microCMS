@@ -1,12 +1,10 @@
 /*==============================================================================
-Media
-============================================================================= */
-/*==============================================================================
 common
 ============================================================================= */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 10vh;
+  word-break: break-word;
 }
 @media screen and (min-width: 768px) {
   html {
@@ -23,14 +21,25 @@ body {
   font-family: "Shippori Mincho", serif;
 }
 
+h1{
+  font-size: 16rem;
+  margin: 50rem 0;
+}
+
+h2 {
+  font-size: 18rem;
+  margin: 0 0 5rem;
+}
+
+li, p {
+  font-size: 14rem;
+  line-height: 1.4;
+  margin-bottom: 24rem;
+}
 a {
   position: relative;
   transition: 0.3s;
-}
-@media screen and (max-width: 767px) {
-  a {
-    font-size: 14rem;
-  }
+  font-size: 14rem;
 }
 a::after {
   position: absolute;
@@ -46,7 +55,7 @@ a::after {
 }
 @media screen and (max-width: 767px) {
   a::after {
-    bottom: -5px;
+    bottom: -5rem;
   }
 }
 a:hover {
@@ -56,12 +65,6 @@ a:hover {
 a:hover::after {
   transform: scale(1, 1);
   transform-origin: left top;
-}
-
-@media screen and (max-width: 767px) {
-  p {
-    font-size: 12rem;
-  }
 }
 
 section {
@@ -83,14 +86,27 @@ section {
   }
 }
 
-h2 {
-  font-size: 18rem;
-  margin: 0 0 5rem;
+img{
+  width: 100%;
+  height: auto;
+  margin: 30rem 0 0;
 }
 
-li, p {
-  font-size: 14rem;
+.entry-content{
+  margin-bottom: 100rem;
 }
+
+@media screen and (max-width: 767px){
+  .entry-content{
+    margin-bottom: 50rem;
+  }
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 /*==============================================================================
 header
@@ -101,7 +117,7 @@ header {
   width: 5%;
   top: 40%;
   left: 5%;
-  transition: 0.5s;
+  transition: 1s;
 }
 @media screen and (max-width: 767px) {
   header {
@@ -118,11 +134,17 @@ header {
     justify-content: center;
   }
 }
-@media screen and (min-width: 768px) {
-  header li:not(:last-child) {
-    margin-bottom: 20rem;
+
+header li:not(:last-child) {
+  margin: 0 0 20rem;
+}
+
+@media screen and (max-width: 767px){
+  header li{
+    margin: 0 !important;
   }
 }
+
 header li:nth-of-type(2) {
   animation-delay: 0.3s;
 }
@@ -134,8 +156,9 @@ header a {
 }
 @media screen and (max-width: 767px) {
   header.overAbout {
-    opacity: 0;
-    transition: 0.5s;
+    top: 5vh;
+    left: 3%;
+    transition: .5s;
   }
 }
 
@@ -165,9 +188,9 @@ header a {
   }
 }
 #about li {
-  line-height: 24px;
   color: #fff;
   margin: 0 0 10rem;
+  line-height: 1.4;
 }
 @media screen and (max-width: 767px) {
   #about li {
@@ -179,7 +202,7 @@ header a {
   background: url(../image/DSC09828.JPG) no-repeat center/cover;
 }
 #diary ul {
-  padding: 100rem 0;
+  padding: 50rem 0;
   width: 80%;
   margin: 0 auto;
 }
@@ -189,7 +212,7 @@ header a {
   }
 }
 #diary li {
-  margin: 0 0 20px;
+  margin: 0 0 20rem;
 }
 #diary a {
   color: #fff;
@@ -204,23 +227,40 @@ header a {
   place-items: center;
 }
 #sns ul {
-  gap: 0 50rem;
+  gap: 0 30rem;
   display: flex;
 }
+
 @media screen and (max-width: 767px) {
-  #sns ul {
-    gap: 0 25rem;
+  #sns ul{
+    gap: 0 20rem;
   }
 }
+
+
+#sns ul li{
+  margin-bottom: 0;
+}
+
+#sns img{
+  transition: 1s ;
+  transform: rotateY( 0deg ) ;
+}
+
+#sns img:hover{
+  transition: 1s;
+  transform: rotateY( 360deg ) ;
+}
+
+#sns a:hover::after{
+  content: none;
+}
+
 #sns img {
-  width: 30rem;
+  width: 25rem;
 }
 @media screen and (max-width: 767px) {
   #sns img {
     width: 25rem;
   }
-}
-
-body.single header {
-  display: none;
 }
